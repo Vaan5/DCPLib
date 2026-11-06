@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019, FG Simulation und Modellierung, Leibniz Universität Hannover, Germany
+ * Copyright (C) 2019, FG Simulation und Modellierung, Leibniz UniversitÃ¤t Hannover, Germany
  *
  * All rights reserved.
  *
@@ -136,7 +136,7 @@ public:
 
     void setPduSize(size_t pduSize) {
         this->stream_size = pduSize + PDU_LENGTH_INDICATOR_SIZE;
-        *((uint32_t*) this->stream) = pduSize;
+        *((uint32_t*) this->stream) = static_cast<uint32_t>(pduSize);
     }
 
 protected:

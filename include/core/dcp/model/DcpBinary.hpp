@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019, FG Simulation und Modellierung, Leibniz Universit‰t Hannover, Germany
+ * Copyright (C) 2019, FG Simulation und Modellierung, Leibniz Universit√§t Hannover, Germany
  *
  * All rights reserved.
  *
@@ -55,12 +55,12 @@ public:
         return payload + 4;
     }
 
-    const void setBinary(uint32_t length, const uint8_t* binary){
+    void setBinary(uint32_t length, const uint8_t* binary){
         *((uint32_t*) payload) = length;
         std::copy(binary, binary + length, payload+4);
     }
 
-    const uint32_t getSize() const{
+    uint32_t getSize() const{
         return *((uint16_t*) payload);
     }
 

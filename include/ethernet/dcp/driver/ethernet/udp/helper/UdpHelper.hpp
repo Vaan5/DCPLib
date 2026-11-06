@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019, FG Simulation und Modellierung, Leibniz Universit‰t Hannover, Germany
+ * Copyright (C) 2019, FG Simulation und Modellierung, Leibniz Universit√§t Hannover, Germany
  *
  * All rights reserved.
  *
@@ -59,6 +59,8 @@ public:
             dcpManager.reportError(DcpError::PROTOCOL_ERROR_GENERIC);
 #if defined(DEBUG) || defined(LOGGING)
             Log(NETWORK_PROBLEM, Udp::protocolName, e.what());
+#else
+            (void) e;
 #endif
         }
     }
